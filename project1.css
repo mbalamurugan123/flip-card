@@ -1,0 +1,49 @@
+body{
+  background-image: linear-gradient(to right,lightgreen,yellow);
+}
+.main{
+  text-align: center;
+  position: relative;
+  top: 40px;
+  font-family: "sofia",sans-serif;
+  font-size: xx-large;
+  /* border: 2px solid blue; */
+  border-radius: 10px;
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+    display: inline;
+    text-align: center;
+    position: relative;
+    top: 50px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    box-shadow: 10 40px 80px 10 rgba(243, 16, 16, 0.2);
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-front-card, .flip-back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+  }
+  .flip-front-card {
+    background-color: #bbb;
+    color: black;
+  }
+  .flip-back-card {
+    background-color: white;
+    transform: rotateY(180deg);
+  }
